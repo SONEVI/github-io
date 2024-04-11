@@ -1,0 +1,54 @@
+body {
+	background-color: LightBlue;
+	}	
+.container {
+	max-width: 390px;
+	background-color: white;
+}
+.inner {
+	display: grid;
+	grid-template-columns: 1fr, 1fr;
+	grid-template-rows: 170px 100px 0px;
+}
+.img {
+	width: 25%;
+}
+.name {
+	display: inline-block;
+	width: 70px;
+	height: 20px;
+	padding: 2px;
+	text-align: center;
+	font-weight: bold;
+	font: Arial;
+	font-size: 17px;
+}
+.price {
+	display: inline-block;
+	width: 70px;
+	height: 20px;
+	padding: 2px;
+	text-align: center;
+	font: Arial;
+		font-weight: normal;
+}
+.item {
+	text-align: center;
+}
+.btn {
+	display: inline-block;
+	padding: 8px 15px;
+	margin: 0 0 5px 0;
+	border: none;
+	background: Salmon;
+	border-radius: 10px;
+	color: black;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.btn:hover {
+	background: Red;
+}
+.usecard {
+	text-align: center;
+}

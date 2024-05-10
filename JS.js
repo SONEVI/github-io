@@ -3,49 +3,25 @@ let tg = window.Telegram.WebApp;
 tg.expand();
 
 tg.MainButton.text="bold";
-tg.MainButton.setText("italic")
-tg.MainButton.textColor = "#F55353";
-tg.MainButton.color = "143F6B";
-tg.MainButton.setParams = ("yellow": "#FFD700"});
+tg.MainButton.setText("КОРЗИНА")
+tg.MainButton.textColor = "#000000";
+tg.MainButton.color = "#87CEFA";
+tg.MainButton.hide();
 
-
-let btn = document.getElementById("btn");
-btn.addEventListener('click', function(){
-	if (tg.MainButton.isVisible){
-		tg.MainButton.hide()
-	}
-	else{
-		tg.MainButton.show()
-	}
-});
-
-
-let btnED = document.getElementById("btnED")
-btnEd.addEventListener('click', function(){
-	if (tg.MainButton.isActive){
-		tg.MainButton.setParams({"red": "#B22222"});
-		tg.MainButton.disable();
-	}
-	else{
-		tg.MainButton.setParams({"yellow": "#FFD700"});
-		tg.MainButton.enable();
-	}
-});
-
-
-Telegram.WebApp.onEvent('mainButtonClicked', function(){
-	tg.sendData("some string that we need to send");
-});
-
-
-let usercard = document.getElementById("usercard");
-
-let profName = document.createElement('p');
-profName.innerText = `$(tg.initDataUnsafe.user.first_name}
-${tg.intiDataUnsafe.user.last_name}
-$(tg.initDataUnsafe.user.username} (${tg.initDataUnsafe.user.language_code})`;
-usercard.appendChild(profName);
-
-let userid = document.createElement('p');
-userid.innerText = `$(tg.initDataUnsafe.user.id}`;
-usercard.appendChild(userid);
+var cotcand = document.getElementById("")
+var cotcandps = document.getElementById("")
+var cotcandms = document.getElementById("")
+var lemon = document.getElementById("")
+var lemonps = document.getElementById("")
+var lemonms = document.getElementById("")
+var don = document.getElementById("")
+var donps = document.getElementById("")
+var donms = document.getElementById("")
+var cof = document.getElementById("")
+var cofps = document.getElementById("")
+var cofms = document.getElementById("")
+var cof = document.getElementById("")
+var cheesc = document.getElementById("")
+var cheescps = document.getElementById("")
+var cheescms = document.getElementById("")
+var cheesc = document.getElementById("")

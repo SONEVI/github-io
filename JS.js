@@ -3,28 +3,142 @@ let tg = window.Telegram.WebApp;
 tg.expand();
 
 tg.MainButton.text="bold";
-tg.MainButton.setText("КОРЗИНА")
+tg.MainButton.setText("ВЫБЕРИТЕ ТОВАР")
 tg.MainButton.textColor = "#000000";
 tg.MainButton.color = "#87CEFA";
 tg.MainButton.hide();
 
-var cotcand = document.getElementById("btn1")
-var cotcandps = document.getElementById("pls1")
-var cotcandms = document.getElementById("mns1")
-var lemon = document.getElementById("btn2")
-var lemonps = document.getElementById("pls2")
-var lemonms = document.getElementById("mns2")
-var don = document.getElementById("btn3")
-var donps = document.getElementById("pls3")
-var donms = document.getElementById("mns3")
-var cof = document.getElementById("btn4")
-var cofps = document.getElementById("pls4")
-var cofms = document.getElementById("mns4")
-var cheesc = document.getElementById("btn5")
-var cheescps = document.getElementById("pls5")
-var cheescms = document.getElementById("mns5")
-var cupcake = document.getElementById("btn6")
-var cupcakeps = document.getElementById("pls6")
-var cupcakems = document.getElementById("mns6")
+var cotcand = document.getElementById("btn1");
+var cotcandps = document.getElementById("pls1");
+var cotcandms = document.getElementById("mns1");
+var lemon = document.getElementById("btn2");
+var lemonps = document.getElementById("pls2");
+var lemonms = document.getElementById("mns2");
+var don = document.getElementById("btn3");
+var donps = document.getElementById("pls3");
+var donms = document.getElementById("mns3");
+var cof = document.getElementById("btn4");
+var cofps = document.getElementById("pls4");
+var cofms = document.getElementById("mns4");
+var cheesc = document.getElementById("btn5");
+var cheescps = document.getElementById("pls5");
+var cheescms = document.getElementById("mns5");
+var cupcak = document.getElementById("btn6");
+var cupcakps = document.getElementById("pls6");
+var cupcakms = document.getElementById("mns6");
 
-var 1 = 
+var items = {
+	"cottoncandy": {"kol-vo":0,
+					"price":599,
+					"sum":0
+	},
+	"lemonade": {"kol-vo":0,
+				"price":295,
+				"sum":0,
+	},
+	"donut": {"kol-vo":0,
+			"price":550,
+			"sum":0
+	},
+	"coffee": {"kol-vo":0,
+			"price":495,
+			"sum":0
+	},
+	"cheescake": {"kol-vo":0,
+				"price":700,
+				"sum":0
+	},
+	"cupcake": {"kol-vo":0,
+				"price":299,
+				"sum":0
+	}
+};
+
+function change(food,p) {
+	items[food]["kol-vo"] += p;
+	if (items[food]["kol-vo"] < 0){
+		items[food]["kol-vo"] = 0;
+	}		
+	items[food]["sum"] = items[food]["kol-vo"] * items[food]["price"];
+};
+
+function setmb(butn) {
+	let butn = items["cottoncandy"]["sum"] + items["lemonade"]["sum"] + items["donut"]["sum"] + items["coffee"]["sum"] + items["cheescake"]["sum"] + items["cupcake"]["sum"];
+	tg.MainButton.text = String(butn/100) + " zł";
+
+cotcandps.addEventListener('click', function(){
+change("cottoncandy", 1);
+cotcand.innerHTML = String(items["cottoncandy"]["sum"]/100) + " zł";
+console.log(items);
+})
+
+lemonps.addEventListener('click', function(){
+change("lemonade", 1);
+lemon.innerHTML = String(items["lemonade"]["sum"]/100) + " zł";
+console.log(items);
+})
+
+donps.addEventListener('click', function(){
+change("donut", 1);
+don.innerHTML = String(items["donut"]["sum"]/100) + " zł";
+console.log(items);
+})
+
+cofps.addEventListener('click', function(){
+change("coffee", 1);
+cof.innerHTML = String(items["coffee"]["sum"]/100) + " zł";
+console.log(items);
+})
+
+cheescps.addEventListener('click', function(){
+change("cheescake", 1);
+cheesc.innerHTML = String(items["cheescake"]["sum"]/100) + " zł";
+console.log(items);
+})
+
+cupcakps.addEventListener('click', function(){
+change("cupcake", 1);
+cupcak.innerHTML = String(items["cupcake"]["sum"]/100) + " zł";
+console.log(items);
+})
+
+
+
+
+
+
+cotcandms.addEventListener('click', function(){
+change("cottoncandy", -1);
+cotcand.innerHTML = String(items["cottoncandy"]["sum"]/100) + " zł";
+console.log(items);
+})
+
+lemonms.addEventListener('click', function(){
+change("lemonade", -1);
+lemon.innerHTML = String(items["lemonade"]["sum"]/100) + " zł";
+console.log(items);
+})
+
+donms.addEventListener('click', function(){
+change("donut", -1);
+don.innerHTML = String(items["donut"]["sum"]/100) + " zł";
+console.log(items);
+})
+
+cofms.addEventListener('click', function(){
+change("coffee", -1);
+cof.innerHTML = String(items["coffee"]["sum"]/100) + " zł";
+console.log(items);
+})
+
+cheescms.addEventListener('click', function(){
+change("cheescake", -1);
+cheesc.innerHTML = String(items["cheescake"]["sum"]/100) + " zł";
+console.log(items);
+})
+
+cupcakms.addEventListener('click', function(){
+change("cupcake", -1);
+cupcak.innerHTML = String(items["cupcake"]["sum"]/100) + " zł";
+console.log(items);
+})

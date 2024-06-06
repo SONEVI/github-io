@@ -62,45 +62,48 @@ function change(food,p) {
 	items[food]["sum"] = items[food]["kol-vo"] * items[food]["price"];
 };
 
-function setmb(butn) {
+function setmb() {
 	let butn = items["cottoncandy"]["sum"] + items["lemonade"]["sum"] + items["donut"]["sum"] + items["coffee"]["sum"] + items["cheescake"]["sum"] + items["cupcake"]["sum"];
 	tg.MainButton.text = String(butn/100) + " zł";
+	console.log(butn);
+};
 
 cotcandps.addEventListener('click', function(){
 change("cottoncandy", 1);
 cotcand.innerHTML = String(items["cottoncandy"]["sum"]/100) + " zł";
 console.log(items);
-})
+setmb();
+});
 
 lemonps.addEventListener('click', function(){
 change("lemonade", 1);
 lemon.innerHTML = String(items["lemonade"]["sum"]/100) + " zł";
 console.log(items);
-})
+});
 
 donps.addEventListener('click', function(){
 change("donut", 1);
 don.innerHTML = String(items["donut"]["sum"]/100) + " zł";
 console.log(items);
-})
+});
 
 cofps.addEventListener('click', function(){
 change("coffee", 1);
 cof.innerHTML = String(items["coffee"]["sum"]/100) + " zł";
 console.log(items);
-})
+});
 
 cheescps.addEventListener('click', function(){
 change("cheescake", 1);
 cheesc.innerHTML = String(items["cheescake"]["sum"]/100) + " zł";
 console.log(items);
-})
+});
 
 cupcakps.addEventListener('click', function(){
 change("cupcake", 1);
 cupcak.innerHTML = String(items["cupcake"]["sum"]/100) + " zł";
 console.log(items);
-})
+});
 
 
 
@@ -111,31 +114,32 @@ cotcandms.addEventListener('click', function(){
 change("cottoncandy", -1);
 cotcand.innerHTML = String(items["cottoncandy"]["sum"]/100) + " zł";
 console.log(items);
-})
+setmb();
+});
 
 lemonms.addEventListener('click', function(){
 change("lemonade", -1);
 lemon.innerHTML = String(items["lemonade"]["sum"]/100) + " zł";
 console.log(items);
-})
+});
 
 donms.addEventListener('click', function(){
 change("donut", -1);
 don.innerHTML = String(items["donut"]["sum"]/100) + " zł";
 console.log(items);
-})
+});
 
 cofms.addEventListener('click', function(){
 change("coffee", -1);
 cof.innerHTML = String(items["coffee"]["sum"]/100) + " zł";
 console.log(items);
-})
+});
 
 cheescms.addEventListener('click', function(){
 change("cheescake", -1);
 cheesc.innerHTML = String(items["cheescake"]["sum"]/100) + " zł";
 console.log(items);
-})
+});
 
 cupcakms.addEventListener('click', function(){
 change("cupcake", -1);

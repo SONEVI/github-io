@@ -6,11 +6,19 @@ body {
 }
 .inner {
 	display: grid;
-	grid-template-columns: 1fr, 1fr;
-	grid-template-rows: 200px 200px 200px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 260px 260px 260px;
+}
+.window {
+	display: inline-block;
+	background-color: white;
+	border-radius: 100px 100px 5px 5px;
+	height: 160px;
+	margin-top: 10px;
 }
 .img {
-	width: 25%;
+	width: 50%;
+	margin-top: 10px;
 }
 .name {
 	display: inline-block;
@@ -29,7 +37,7 @@ body {
 	padding: 2px;
 	text-align: center;
 	font: Arial;
-		font-weight: normal;
+	font-weight: normal;
 }
 .item {
 	text-align: center;
@@ -37,7 +45,7 @@ body {
 .btn {
 	display: inline-block;
 	padding: 8px 15px;
-	margin: 0 0 5px 0;
+	margin: 4px 0px 10px 0px;
 	border: none;
 	background: Salmon;
 	border-radius: 10px;
@@ -47,6 +55,53 @@ body {
 }
 .btn:hover {
 	background: Red;
+}
+.pls {
+	width: 30px;
+	height: 30px;
+	border: none;
+	background-image: url('plus-icon.png');
+	background-size: cover;
+	background-color: rgba(225, 225, 0, 0);
+}
+.pls:hover {
+	animation: zoom-in-zoom-out 1s ease infinite;
+}
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.mns {
+	width: 30px;
+	height: 30px;
+	border: none;
+	background-image: url('minus-icon.png');
+	background-size: cover;
+	background-color: rgba(225, 225, 0, 0);
+}
+.mns:hover {
+	animation: zoom-in-zoom-out 1s ease infinite;
+}
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.margin {
+height: 25%;
 }
 .usecard {
 	text-align: center;

@@ -81,30 +81,35 @@ lemonps.addEventListener('click', function(){
 change("lemonade", 1);
 lemon.innerHTML = String(items["lemonade"]["sum"]/100) + " zł";
 console.log(items);
+setmb();
 });
 
 donps.addEventListener('click', function(){
 change("donut", 1);
 don.innerHTML = String(items["donut"]["sum"]/100) + " zł";
 console.log(items);
+setmb();
 });
 
 cofps.addEventListener('click', function(){
 change("coffee", 1);
 cof.innerHTML = String(items["coffee"]["sum"]/100) + " zł";
 console.log(items);
+setmb();
 });
 
 cheescps.addEventListener('click', function(){
 change("cheescake", 1);
 cheesc.innerHTML = String(items["cheescake"]["sum"]/100) + " zł";
 console.log(items);
+setmb();
 });
 
 cupcakps.addEventListener('click', function(){
 change("cupcake", 1);
 cupcak.innerHTML = String(items["cupcake"]["sum"]/100) + " zł";
 console.log(items);
+setmb();
 });
 
 
@@ -123,28 +128,33 @@ lemonms.addEventListener('click', function(){
 change("lemonade", -1);
 lemon.innerHTML = String(items["lemonade"]["sum"]/100) + " zł";
 console.log(items);
+setmb();
 });
 
 donms.addEventListener('click', function(){
 change("donut", -1);
 don.innerHTML = String(items["donut"]["sum"]/100) + " zł";
 console.log(items);
+setmb();
 });
 
 cofms.addEventListener('click', function(){
 change("coffee", -1);
 cof.innerHTML = String(items["coffee"]["sum"]/100) + " zł";
 console.log(items);
+setmb();
 });
 
 cheescms.addEventListener('click', function(){
 change("cheescake", -1);
 cheesc.innerHTML = String(items["cheescake"]["sum"]/100) + " zł";
 console.log(items);
+setmb();
 });
 
 cupcakms.addEventListener('click', function(){
 change("cupcake", -1);
 cupcak.innerHTML = String(items["cupcake"]["sum"]/100) + " zł";
 console.log(items);
+setmb();
 })

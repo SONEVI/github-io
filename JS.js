@@ -65,6 +65,8 @@ function change(food,p) {
 function setmb() {
 	let butn = items["cottoncandy"]["sum"] + items["lemonade"]["sum"] + items["donut"]["sum"] + items["coffee"]["sum"] + items["cheescake"]["sum"] + items["cupcake"]["sum"];
 	tg.MainButton.text = String(butn/100) + " zł";
+	tg.MainButton.show();
+	tg.MainButton.enable();
 	console.log(butn);
 };
 

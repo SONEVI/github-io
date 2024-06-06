@@ -5,7 +5,7 @@ tg.expand();
 tg.MainButton.text="bold";
 tg.MainButton.setText("ВЫБЕРИТЕ ТОВАР")
 tg.MainButton.textColor = "#000000";
-tg.MainButton.color = "#87CEFA";
+tg.MainButton.color = "#EB6772";
 tg.MainButton.hide();
 
 var cotcand = document.getElementById("btn1");

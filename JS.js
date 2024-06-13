@@ -67,7 +67,11 @@ function setmb() {
 	tg.MainButton.text = String(butn/100) + " zł";
 	tg.MainButton.show();
 	tg.MainButton.enable();
-	console.log(butn);
+	console.log(butn)
+	var f;
+f = (String(items['cottoncandy']['kol-vo']) + 'сахарная вата' + String(items['lemonade']['kol-vo']) + 'лимонад' + String(items['donut']['kol-vo']) + 'пончик' +
+String(items['coffee']['kol-vo']) + 'кофе' + String(items['cheescake']['kol-vo']) + 'чизкейк' + String(items['cupcake']['kol-vo']) + 'кекс');
+	console.log(f);
 };
 
 cotcandps.addEventListener('click', function(){

@@ -158,3 +158,7 @@ cupcak.innerHTML = String(items["cupcake"]["sum"]/100) + " zł";
 console.log(items);
 setmb();
 })
+
+Telegram.WebApp.onEvent('mainButtonClicked', function(){
+tg.sendData(String(items));
+})
